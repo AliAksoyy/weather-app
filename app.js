@@ -17,7 +17,8 @@ const getResult = (cityname) => {
   fetch(query).then((res)=> {
     return res.json()
   })
-  .then((data)=> dispalyResult(data))
+  // .then((data)=> dispalyResult(data))
+  .then(dispalyResult)
 }
 
 const dispalyResult = (result)=> {
