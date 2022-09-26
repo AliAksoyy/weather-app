@@ -33,23 +33,12 @@ const render = (result)=> {
   const {name, main:{temp_min,temp_max,temp},weather,sys:{country}} =result
   console.log()
 
-  content.innerHTML += `
+  content.innerHTML = `
                <div class="city">${name} ${country}</div>
               <div class="temp">${Math.round(temp)}°C</div>
               <div class="desc">${weather[0].main}</div>
-              <div class="minmax">${temp_min}°C / ${temp_max}°c</div>
-
-  `;
-
-
+              <div class="minmax">${Math.round(temp_min)}°C / ${Math.round(temp_max)}°c</div>`;
 }
-
-
-
-
-
-
-
 
 const searchBar = document.getElementById("searchBar")
 searchBar.addEventListener("keydown", setQuery)
