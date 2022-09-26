@@ -43,12 +43,6 @@ const render = (result)=> {
               <div class="minmax">${Math.round(temp_min)}°C / ${Math.round(temp_max)}°c</div>`;
   }
           
-
-  
-
-
-
-
 const renderError =()=> {
 
   const content = document.querySelector(".content");
